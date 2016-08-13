@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 /* GET memory status page. */
 router.get('/memory', function(req, res, next) {
-  var memorySummary = shjs.exec('free -m', {
+  var memorySummary = shjs.exec('free -mt', {
     silent: true
   }).stdout;
 
